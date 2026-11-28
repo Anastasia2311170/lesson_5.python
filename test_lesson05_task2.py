@@ -12,11 +12,8 @@ def test_form_submission():
 
     driver.find_element(By.CSS_SELECTOR, ("[type='submit']")).click()
 
-    assert (
-        driver.current_url == "https://httpbin.qa-territory.online/forms/post/submitted"
+    assert driver.current_url == (
+        "https://httpbin.qa-territory.online/forms/post/submitted"
     )
 
     driver.quit()
-
-
-test_form_submission()

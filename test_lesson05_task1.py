@@ -9,13 +9,13 @@ def test_navigation():
     button_HTMLForm = driver.find_element(By.LINK_TEXT, "HTML Form")
     button_HTMLForm.click()
 
-    assert driver.current_url == "https://httpbin.qa-territory.online/forms/post"
+    assert driver.current_url == (
+        "https://httpbin.qa-territory.online/forms/post"
+    )
 
     driver.back()
 
-    assert driver.current_url == "https://httpbin.qa-territory.online/"
-
+    assert driver.current_url == (
+        "https://httpbin.qa-territory.online/"
+    )
     driver.quit()
-
-
-test_navigation()
